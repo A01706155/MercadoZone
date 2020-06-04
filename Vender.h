@@ -1,12 +1,12 @@
 #ifndef Vender_h
 #define Vender_h
 
-#include "Registrarse.h"
+// #include "Registrarse.h"
 #include<stdlib.h>
 
 using namespace std;
-
-class Vender: public Registrarse {
+//Clase hija de Registrarse 
+class Vender/*public Registrarse */ {
   private: //Atributos
     string nombre;
     int edad;
@@ -14,6 +14,7 @@ class Vender: public Registrarse {
     string producto;
     int precio;
   public: //Métodos
+    Vender();
     Vender(string, int, string, string, int); //Constructor
     void venderProducto();
     void obtenerInformacion();
@@ -29,16 +30,27 @@ Vender::Vender(string _nombre, int _edad, string _direccion, string _producto, i
 }
 
 void Vender::venderProducto(){
-  return Registrarse::registrarUsuario();
-  cout<<"El nombre de tu producto a vender es: "<<producto<<endl;
-  cout<<"El precio que has puesto es de: "<<precio<<endl;
-
+  if(edad>=18){
+    cout<<"Tu nombre de usuario es: "<<nombre<<endl;;
+    cout<<"Tu direccion actual es: "<<direccion<<endl;
+    cout<<"El nombre de tu producto a vender es: "<<producto<<endl;
+    cout<<"El precio que has puesto es de: "<<precio<<"\n"<<endl;
+  }
+  else{
+    cout<<nombre<<", no cumples con la edad mínima para utilizar esta plataforma. Lo sentimos"<<endl;
+  }
 }
 
 void Vender::obtenerInformacion(){
-  return Registrarse::registrarUsuario();
-  cout<<"Estás por comprar: "<<producto<<endl;
-  cout<<"Su precio es: "<<precio<<endl;
+  if(edad>=18){
+    cout<<"Tu nombre de usuario es: "<<nombre<<endl;;
+    cout<<"Tu direccion actual es: "<<direccion<<endl;
+    cout<<"Estás por comprar: "<<producto<<endl;
+    cout<<"Su precio es: "<<precio<<"\n"<<endl;
+  }
+  else{
+    cout<<nombre<<", no cumples con la edad mínima para utilizar esta plataforma. Lo sentimos"<<endl;
+  }
 }
 
 #endif

@@ -1,37 +1,45 @@
 #ifndef Comprar_h
 #define Comprar_h
 
-#include<iostream>
+// #include "Vender.h"
 #include<stdlib.h>
-using namespace std;
 
-class Comprar{
+using namespace std;
+//Clase hija de Vender
+class Comprar/*public Vender */ {
   private: //Atributos
     string nombre;
     int edad;
     string direccion;
+    string producto;
+    int precio;
+    int comision;
   public: //Métodos
-    Comprar(string, int, string); //Constructor
+    Comprar();
+    Comprar(string, int, string, string, int, int); //Constructor
     void comprarProducto();
 };
 
 //Constructor, inicializar atributos
-Comprar::Comprar(string _nombre, int _edad, string _direccion){
+Comprar::Comprar(string _nombre, int _edad, string _direccion, string _producto, int _precio, int _comision){
   nombre = _nombre;
   edad = _edad;
   direccion = _direccion;
+  producto = _producto;
+  precio = _precio;
+  comision = _comision;
 }
 
 void Comprar::comprarProducto(){
-  cout<<"Tu nombre de usuario es: "<<nombre;
   if(edad>=18){
-    cout<<""<<endl;
+    cout<<"¡Has comprado "<<producto<<" satisfactoriamente!"<<endl;
+    cout<<"A nombre de: "<<nombre<<endl;;
+    cout<<"Direccion de entrega: "<<direccion<<endl;
+    cout<<"Has pagado: "<<precio+comision<<"\n"<<endl;
   }
   else{
-    cout<<"\nNo cumples con la edad mínima para utilizar esta plataforma, lo sentimos"<<endl;
-    exit(0);
+    cout<<nombre<<", no cumples con la edad mínima para utilizar esta plataforma. Lo sentimos"<<endl;
   }
-  cout<<"Tu direccion actual es: "<<direccion<<endl;
 }
 
 #endif

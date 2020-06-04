@@ -29,7 +29,7 @@ void Registrarse::registrarUsuario(){
     cout<<"Tu direccion actual es: "<<direccion<<"\n"<<endl;
   }
   else{
-    cout<<nombre<<", no cumples con la edad mínima para utilizar esta plataforma. Lo sentimos"<<endl;
+    cout<<nombre<<", no cumples con la edad mínima para utilizar esta plataforma. Lo sentimos\n"<<endl;
   }
 }
 
