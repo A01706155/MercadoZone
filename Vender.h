@@ -1,11 +1,12 @@
-#ifndef Registrarse_h
-#define Registrarse_h
+#ifndef Vender_h
+#define Vender_h
 
-#include<iostream>
+#include "Registrarse.h"
 #include<stdlib.h>
+
 using namespace std;
 
-class Vender : public: Registrarse{
+class Vender: public Registrarse {
   private: //Atributos
     string nombre;
     int edad;
@@ -13,13 +14,13 @@ class Vender : public: Registrarse{
     string producto;
     int precio;
   public: //Métodos
-    Vender(string, int, string, string, string); //Constructor
+    Vender(string, int, string, string, int); //Constructor
     void venderProducto();
-    voud obtenerInformacion();
+    void obtenerInformacion();
 };
 
 //Constructor, inicializar atributos
-Registrarse::Registrarse(string _nombre, int _edad, string _direccion, string _producto, int _precio){
+Vender::Vender(string _nombre, int _edad, string _direccion, string _producto, int _precio){
   nombre = _nombre;
   edad = _edad;
   direccion = _direccion;
@@ -28,14 +29,14 @@ Registrarse::Registrarse(string _nombre, int _edad, string _direccion, string _p
 }
 
 void Vender::venderProducto(){
-  return Registrarse::registrarusuario();
+  return Registrarse::registrarUsuario();
   cout<<"El nombre de tu producto a vender es: "<<producto<<endl;
   cout<<"El precio que has puesto es de: "<<precio<<endl;
 
 }
 
 void Vender::obtenerInformacion(){
-  return Registrarse::registrarusuario();
+  return Registrarse::registrarUsuario();
   cout<<"Estás por comprar: "<<producto<<endl;
   cout<<"Su precio es: "<<precio<<endl;
 }

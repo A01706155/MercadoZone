@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Registrarse.h"
+#include "Vender.h"
 using namespace std;
 
 // Inicio del programa

@@ -11,6 +11,7 @@ class Registrarse{
     int edad;
     string direccion;
   public: //Métodos
+    Registrarse();
     Registrarse(string, int, string); //Constructor
     void registrarUsuario();
 };
@@ -23,15 +24,13 @@ Registrarse::Registrarse(string _nombre, int _edad, string _direccion){
 }
 
 void Registrarse::registrarUsuario(){
-  cout<<"Tu nombre de usuario es: "<<nombre;
   if(edad>=18){
-    cout<<""<<endl;
+    cout<<"Tu nombre de usuario es: "<<nombre<<endl;;
+    cout<<"Tu direccion actual es: "<<direccion<<"\n"<<endl;
   }
   else{
-    cout<<"\nNo cumples con la edad mínima para utilizar esta plataforma, lo sentimos"<<endl;
-    return nombre;
+    cout<<nombre<<", no cumples con la edad mínima para utilizar esta plataforma. Lo sentimos"<<endl;
   }
-  cout<<"Tu direccion actual es: "<<direccion<<"\n"<<endl;
 }
 
 #endif
