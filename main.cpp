@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Registrarse.h"
-#include "Vender.h"
-#include "Comprar.h"
+//#include "Vender.h"
+//#include "Comprar.h"
 using namespace std;
 
 // Inicio del programa
@@ -17,24 +17,24 @@ int main() {
   Registrarse usuario3("Tikerito",16,"Las brujas 110 El Marques Qro");
   
   // Ventas
-  string producto = "Jabon neutro para manos";
-  int precio = 90, comision = 15;
+  //string producto = "Jabon neutro para manos";
+  //int precio = 90, comision = 15;
 
-  Vender usuario4("Jazmin",19,"El vergel 37 Irapuato Guanajuato",producto, precio);
-  Vender usuario5("Juanin",25,"Altamira 211 Bellavista Guanajuato",producto, precio);
+  //Vender usuario4("Jazmin",19,"El vergel 37 Irapuato Guanajuato",producto, precio);
+  //Vender usuario5("Juanin",25,"Altamira 211 Bellavista Guanajuato",producto, precio);
 
   //Compras
 
-  Comprar usuario6("Juanin",25,"Altamira 211 Bellavista Guanajuato",producto, precio, comision);
+  //Comprar usuario6("Juanin",25,"Altamira 211 Bellavista Guanajuato",producto, precio, comision);
 
 
-  // Acciones
+  // Acciones, objetos
   usuario1.registrarUsuario();
   usuario2.registrarUsuario();
   usuario3.registrarUsuario();
-  usuario4.venderProducto();
-  usuario5.obtenerInformacion();
-  usuario6.comprarProducto();
+  //usuario4.venderProducto();
+  //usuario5.obtenerInformacion();
+  //usuario6.comprarProducto();
 
   cout<<"FIN DEL PROGRAMA"<<endl;
 

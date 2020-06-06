@@ -17,6 +17,13 @@ class Registrarse{
 };
 
 //Constructor, inicializar atributos
+
+Registrarse::Registrarse(){
+  nombre = "NombrePorDefault";
+  edad = 8374917;
+  direccion = "Direcciondefault";
+}
+
 Registrarse::Registrarse(string _nombre, int _edad, string _direccion){
   nombre = _nombre;
   edad = _edad;
