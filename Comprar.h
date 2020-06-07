@@ -1,24 +1,23 @@
 #ifndef Comprar_h
 #define Comprar_h
 
-// #include "Vender.h"
+#include "Vender.h"
 #include<stdlib.h>
 
 using namespace std;
 //Clase hija de Vender
-class Comprar/*public Vender */ {
+class Comprar : public Vender {
   private: //Atributos
-    string nombre;
-    int edad;
-    string direccion;
-    string producto;
-    int precio;
     int comision;
   public: //Métodos
     Comprar();
     Comprar(string, int, string, string, int, int); //Constructor
     void comprarProducto();
 };
+
+Comprar::Comprar(){
+  comision = 8374917;
+}
 
 //Constructor, inicializar atributos
 Comprar::Comprar(string _nombre, int _edad, string _direccion, string _producto, int _precio, int _comision){

@@ -6,7 +6,7 @@
 using namespace std;
 
 class Registrarse{
-  private: //Atributos
+  protected: //Atributos
     string nombre;
     int edad;
     string direccion;

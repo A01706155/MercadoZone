@@ -1,16 +1,13 @@
 #ifndef Vender_h
 #define Vender_h
 
-// #include "Registrarse.h"
+#include "Registrarse.h"
 #include<stdlib.h>
 
 using namespace std;
 //Clase hija de Registrarse 
-class Vender/*public Registrarse */ {
-  private: //Atributos
-    string nombre;
-    int edad;
-    string direccion;
+class Vender : public Registrarse {
+  protected: //Atributos
     string producto;
     int precio;
   public: //Métodos
@@ -19,6 +16,11 @@ class Vender/*public Registrarse */ {
     void venderProducto();
     void obtenerInformacion();
 };
+
+Vender::Vender(){
+  producto = "ProductoDefault";
+  precio = 8374917;
+}
 
 //Constructor, inicializar atributos
 Vender::Vender(string _nombre, int _edad, string _direccion, string _producto, int _precio){
